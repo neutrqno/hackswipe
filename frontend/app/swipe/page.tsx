@@ -9,13 +9,13 @@ export default function Swipe() {
   const [hackathon,setHackathon] = useState("")
 
   useEffect(()=>{
-    fetch("http://localhost:5000/users")
+    fetch("https://hackmatch-api.onrender.com/users")
       .then(res=>res.json())
       .then(data=>setUsers(data))
   },[])
 
   const filteredUsers = users.filter((user:any)=>
-    user.hackathon.toLowerCase() === hackathon.toLowerCase()
+    hackathon && user.hackathon?.toLowerCase() === hackathon.toLowerCase()
   )
 
   return (
@@ -32,8 +32,14 @@ export default function Swipe() {
         onChange={(e)=>setHackathon(e.target.value)}
       />
 
+      {filteredUsers.length === 0 && hackathon && (
+        <p className="text-gray-500 mb-4">
+          No teammates found for this hackathon yet.
+        </p>
+      )}
+
       {filteredUsers.map((user:any,index)=>(
-        
+
         <TinderCard
           key={index}
           preventSwipe={["up","down"]}
