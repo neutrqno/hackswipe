@@ -21,7 +21,7 @@ export default function Swipe() {
   }
 
   const filteredUsers = users.filter((user:any)=>
-    hackathon && user.hackathon?.toLowerCase().includes(hackathon.toLowerCase())
+    user.hackathon?.toLowerCase().trim() === hackathon.toLowerCase().trim()
   )
 
   return(
@@ -37,6 +37,12 @@ export default function Swipe() {
         className="border border-gray-700 bg-zinc-900 p-2 rounded mb-10 w-80"
         onChange={(e)=>setHackathon(e.target.value)}
       />
+
+      {filteredUsers.length === 0 && hackathon && (
+        <p className="text-gray-400 mb-6">
+          No teammates found for this hackathon yet.
+        </p>
+      )}
 
       <div className="flex flex-col items-center">
 
