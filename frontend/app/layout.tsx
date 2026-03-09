@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HackSwipe",
+  title: "HackMatch",
   description: "Swipe to find teammates for your next hackathon",
 };
 
