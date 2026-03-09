@@ -13,7 +13,7 @@ export default function Hero() {
           {/* notch */}
           <div className="w-16 h-2 bg-black rounded-full mx-auto mb-3"></div>
 
-          <div className="relative h-full overflow-hidden">
+          <div className="relative h-full overflow-hidden flex items-center justify-center">
 
             <div className="card card1">
               <h3 className="font-bold">Alex</h3>

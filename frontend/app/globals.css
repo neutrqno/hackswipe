@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 
 /* ----------------------------- */
@@ -45,12 +43,17 @@ body {
 
 .card {
   position: absolute;
-  width: 100%;
-  background: #18181b;
-  border-radius: 12px;
-  padding: 10px;
+  width: 90%;
+  left: 5%;
+  top: 20px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  background: #18181b;
+  border-radius: 14px;
+  padding: 14px;
+
+  border: 1px solid #27272a;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.7);
 
   will-change: transform;
 }
