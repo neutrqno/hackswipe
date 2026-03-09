@@ -1,17 +1,78 @@
-@keyframes swipeCards {
-  0% {
-    transform: translateY(0px);
-  }
+/* PHONE SHADOW DEPTH */
 
-  50% {
-    transform: translateY(-120px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+.shadow-phone {
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.9),
+    0 0 80px rgba(124,58,237,0.2);
 }
 
-.animate-swipe {
-  animation: swipeCards 6s ease-in-out infinite;
+
+/* 3D TILT ON HOVER */
+
+.phone {
+  transition: transform 0.4s ease;
+}
+
+.phone:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+
+/* CARD STYLE */
+
+.card {
+  position: absolute;
+  width: 100%;
+  background: #18181b;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+
+/* CARD STACK POSITIONS */
+
+.card1 {
+  animation: swipe1 6s infinite;
+}
+
+.card2 {
+  animation: swipe2 6s infinite;
+}
+
+.card3 {
+  animation: swipe3 6s infinite;
+}
+
+
+/* SWIPE ANIMATIONS */
+
+@keyframes swipe1 {
+
+  0% { transform: translateY(0) scale(1); z-index:3 }
+
+  40% { transform: translateX(120px) rotate(12deg); opacity:0 }
+
+  100% { transform: translateY(0) scale(1); opacity:1 }
+
+}
+
+@keyframes swipe2 {
+
+  0% { transform: translateY(12px) scale(.95); z-index:2 }
+
+  40% { transform: translateY(0) scale(1) }
+
+  100% { transform: translateY(12px) scale(.95) }
+
+}
+
+@keyframes swipe3 {
+
+  0% { transform: translateY(24px) scale(.9); z-index:1 }
+
+  40% { transform: translateY(12px) scale(.95) }
+
+  100% { transform: translateY(24px) scale(.9) }
+
 }

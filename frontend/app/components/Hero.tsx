@@ -1,52 +1,64 @@
-<div className="relative h-full overflow-hidden">
+<div className="flex gap-12 relative">
 
-  <div className="absolute w-full animate-swipe">
+  {/* PHONE 1 */}
 
-    <div className="bg-zinc-900 rounded-lg p-3 mb-3 shadow-lg">
+  <div className="phone group w-56 h-[420px] rounded-[40px] border border-gray-800 p-3 bg-zinc-950 shadow-phone rotate-6">
 
-      <h3 className="font-bold">
-        Alex
-      </h3>
+    {/* notch */}
+    <div className="w-16 h-2 bg-black rounded-full mx-auto mb-3"></div>
 
-      <p className="text-xs text-gray-400">
-        Python • ML
-      </p>
+    <div className="relative h-full overflow-hidden">
 
-      <p className="text-xs text-purple-400">
-        HackAI
-      </p>
+      {/* card stack */}
 
-    </div>
+      <div className="card card1">
+        <h3 className="font-bold">Alex</h3>
+        <p className="text-xs text-gray-400">Python • ML</p>
+        <p className="text-xs text-purple-400">HackAI</p>
+      </div>
 
-    <div className="bg-zinc-900 rounded-lg p-3 mb-3 shadow-lg">
+      <div className="card card2">
+        <h3 className="font-bold">Sakura</h3>
+        <p className="text-xs text-gray-400">React • UI</p>
+        <p className="text-xs text-purple-400">TwitchLeague</p>
+      </div>
 
-      <h3 className="font-bold">
-        Sakura
-      </h3>
-
-      <p className="text-xs text-gray-400">
-        React • UI
-      </p>
-
-      <p className="text-xs text-purple-400">
-        TwitchLeague
-      </p>
+      <div className="card card3">
+        <h3 className="font-bold">Leo</h3>
+        <p className="text-xs text-gray-400">AI • Data</p>
+        <p className="text-xs text-purple-400">HackAI</p>
+      </div>
 
     </div>
 
-    <div className="bg-zinc-900 rounded-lg p-3 shadow-lg">
+  </div>
 
-      <h3 className="font-bold">
-        Leo
-      </h3>
 
-      <p className="text-xs text-gray-400">
-        AI • Data
-      </p>
+  {/* PHONE 2 */}
 
-      <p className="text-xs text-purple-400">
-        HackAI
-      </p>
+  <div className="phone group w-56 h-[420px] rounded-[40px] border border-gray-800 p-3 bg-zinc-950 shadow-phone -rotate-6">
+
+    <div className="w-16 h-2 bg-black rounded-full mx-auto mb-3"></div>
+
+    <div className="relative h-full overflow-hidden">
+
+      <div className="card card1">
+        <h3 className="font-bold">Maya</h3>
+        <p className="text-xs text-gray-400">Backend • Node</p>
+        <p className="text-xs text-purple-400">HackAI</p>
+      </div>
+
+      <div className="card card2">
+        <h3 className="font-bold">Noah</h3>
+        <p className="text-xs text-gray-400">DevOps • Cloud</p>
+        <p className="text-xs text-purple-400">HackAI</p>
+      </div>
+
+      <div className="card card3">
+        <h3 className="font-bold">Ava</h3>
+        <p className="text-xs text-gray-400">Design • UI</p>
+        <p className="text-xs text-purple-400">TwitchLeague</p>
+      </div>
 
     </div>
 
